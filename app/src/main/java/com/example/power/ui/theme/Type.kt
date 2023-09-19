@@ -2,27 +2,48 @@ package com.example.power.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.power.R
 
-// Set of Material typography styles to start with
+
+
 val Typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
+    h1 = TextStyle(
+        fontFamily = ThemeConstants.myFontFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
-    /* Other default text styles to override
-    button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
-        fontSize = 14.sp
+        fontSize = ThemeConstants.FontSize.heading
     ),
-    caption = TextStyle(
-        fontFamily = FontFamily.Default,
+    h2 = TextStyle(
+        fontFamily = ThemeConstants.myFontFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
+        fontSize = ThemeConstants.FontSize.subHeading
+    ),
+    body1 = TextStyle(
+        fontFamily = ThemeConstants.myFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = ThemeConstants.FontSize.body1
+    ),
+    body2 = TextStyle(
+        fontFamily = ThemeConstants.myFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = ThemeConstants.FontSize.body2
+    ),
+    caption =  TextStyle(
+        fontFamily = ThemeConstants.myFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = ThemeConstants.FontSize.caption
+    ),
+    button = TextStyle(
+        fontFamily = ThemeConstants.myFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = ThemeConstants.FontSize.btnTxtSmall
+    ),
+    subtitle1 = TextStyle(
+        fontFamily = ThemeConstants.myFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = ThemeConstants.FontSize.btnTxtMedium
     )
-    */
 )

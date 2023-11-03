@@ -16,6 +16,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.power.ui.theme.PowerTheme
 
+//Todo
+// Create details page. Take all the relevant info that is needed in the app.
+// Make a logic where we check if name is empty then new user else old user. We are not doing
+//   room db check because it is possible that user once added all info and then did not use it that day
+// Design OOP structure which suits best logically and for storage.
+// Add basic structure of project for MVVM like all the folders etc.
 
 class MainActivity : ComponentActivity() {
 

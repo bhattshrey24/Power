@@ -3,8 +3,9 @@ package com.example.power
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -14,7 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.power.ui.theme.PowerTheme
+import com.example.power.ui.theme.*
 
 //Todo
 // Create details page. Take all the relevant info that is needed in the app.
@@ -34,23 +35,32 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android Ji")
+                    Greeting()
                 }
             }
         }
     }
 }
-
+@Preview()
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!", color = Color.White, fontSize = 24.sp,  modifier = Modifier.padding(50.dp
-        ,50.dp))
+fun Greeting() {
+    Column() {
+        Box(modifier = Modifier.padding(top = 100.dp)
+            .size(200.dp, 20.dp)
+            .background(color = PrimaryColor))
+        Box(modifier = Modifier.padding(top = 10.dp)
+            .size(200.dp, 20.dp)
+            .background(color = TertiaryColor))
+        Box(modifier = Modifier.padding(top = 10.dp)
+            .size(200.dp, 20.dp)
+            .background(color = FourthColor))
+    }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = false)
 @Composable
 fun DefaultPreview() {
     PowerTheme {
-        Greeting("Android")
+        Greeting()
     }
 }
